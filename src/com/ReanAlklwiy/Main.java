@@ -9,6 +9,7 @@ package com.ReanAlklwiy;
 
 //import java.util.ArrayList;
 //import java.util.Arrays;
+import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
 
@@ -21,12 +22,12 @@ public class Main {
 
         int[] numPassword = new int[passwordSize];
         for (int i = 0; i < passwordSize; i++) {
-            numPassword[i] = (int) (Math.random() * 10);
+            numPassword[i] = (int) (Math.random() * 10 + 1);
         }
 
 //        ArrayList<int[]> arrayList = new ArrayList<int[]>(Arrays.asList(numPassword));
 //        String numPassString = numPassword.toString();
-        System.out.println("Password is: " +numPassword);
+        System.out.println("Password is: " + Arrays.toString(numPassword));
     }
 
     /**
@@ -47,7 +48,7 @@ public class Main {
             tempArray[i] = alphaArray[randNum];
         }
 
-        System.out.println("Password is: " +tempArray.toString());
+        System.out.println("Password is: " +Arrays.toString(tempArray));
     }
 
     /**
@@ -58,7 +59,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter the password size (Number of Character: ");
+        System.out.println("Enter the password size (Number of Character): ");
         int passwordSize = scan.nextInt();
 
         System.out.println("Choose one of the options (Enter the option's number):" +
